@@ -1,0 +1,16 @@
+# Begin by ignoring everything
+**/*
+
+# Whielist files
+!/.gitignore
+!/LICENSE
+!/README.rst
+!/matchstick/
+/matchstick/*
+!/matchstick/__init__.py
+!/matchstick/matchstick.py
+!/setup.py
+!/test/
+/test/*
+!/test/__init__.py
+!/test/test_matchstick.py
