@@ -7,6 +7,7 @@
 !/matchstick/
 !/matchstick/__init__.py
 !/matchstick/matchstick.py
+!/tests/
 !/tests/__init__.py
 !/tests/test_matchstick.py
 !/.gitignore
