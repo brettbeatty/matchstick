@@ -1,1 +1,1 @@
-from .matchstick import match, NoMatchException
+from .matchstick import when, NoMatchException

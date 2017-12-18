@@ -1,15 +1,28 @@
-matchstick
-==========
+Matchstick: pattern matching in Python
+======================================
+
+.. image:: https://img.shields.io/circleci/project/github/brettbeatty/hand_grenade.svg
+    :target: https://circleci.com/gh/brettbeatty/hand_grenade
+
+.. image:: https://img.shields.io/github/license/brettbeatty/hand_grenade.svg
+    :target: https://github.com/brettbeatty/hand_grenade/blob/master/LICENSE
+
+.. image:: https://img.shields.io/codecov/c/github/brettbeatty/hand_grenade.svg
+    :target: https://codecov.io/gh/brettbeatty/hand_grenade
+
+.. image:: https://img.shields.io/pypi/v/hand_grenade.svg
+    :target: https://pypi.org/project/hand_grenade/
+
 Matchstick provides a decorator that allows for the overloading of Python functions.
 
 .. code-block:: python
 
-    >>> from matchstick import match
-    >>> @match('x >= 0')
+    >>> from matchstick import when
+    >>> @when('x >= 0')
     ... def f(x):
     ...     return x
     ...
-    >>> @match('x < 0')
+    >>> @when('x < 0')
     ... def f(x):
     ...     return -x
     ...
@@ -28,15 +41,15 @@ The match decorator takes a condition as a string. When the decorated function g
 
 .. code-block:: python
 
-    >>> @match('x[2] == 5')
+    >>> @when('x[2] == 5')
     ... def f(x):
     ...     return sum(x)
     ...
-    >>> @match('len(x) > 3')
+    >>> @when('len(x) > 3')
     ... def f(x):
     ...     return x[3:]
     ...
-    >>> @match('True')
+    >>> @when('True')
     ... def f(x):
     ...     return x
     ...

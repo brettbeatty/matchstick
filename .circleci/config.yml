@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.2
+    steps:
+      - checkout
+      - run:
+          name: Install PyTest & Codecov
+          command: |
+            python -m venv venv
+            source venv/bin/activate
+            pip install pytest codecov pytest-cov
+      - run:
+          name: Run Tests
+          command: |
+            source venv/bin/activate
+            pytest tests
+            pytest --cov=matchstick/ tests/
+      - run:
+          name: Generate .pypirc
+          command: |
+            echo "[distutils]" >> ~/.pypirc
+            echo "index-servers = pypi" >> ~/.pypirc
+            echo "[pypi]" >> ~/.pypirc
+            echo "username=$PYPI_USERNAME" >> ~/.pypirc
+            echo "password=$PYPI_PASSWORD" >> ~/.pypirc
+      - deploy:
+          name: Publish to PyPi
+          command: python setup.py sdist upload
+      - deploy:
+          name: Code Coverage
+          command: |
+            source venv/bin/activate
+            codecov

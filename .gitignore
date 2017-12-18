@@ -1,16 +1,16 @@
 # Begin by ignoring everything
-**/*
+*
 
-# Whielist files
-!/.gitignore
-!/LICENSE
-!/README.rst
+# Whitelist files
+!/.circleci/
+!/.circleci/config.yml
 !/matchstick/
-/matchstick/*
 !/matchstick/__init__.py
 !/matchstick/matchstick.py
+!/tests/__init__.py
+!/tests/test_matchstick.py
+!/.gitignore
+!/LICENSE
+!/MANIFEST.in
+!/README.rst
 !/setup.py
-!/test/
-/test/*
-!/test/__init__.py
-!/test/test_matchstick.py
