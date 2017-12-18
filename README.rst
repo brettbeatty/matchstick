@@ -1,16 +1,16 @@
 Matchstick: pattern matching in Python
 ======================================
 
-.. image:: https://img.shields.io/circleci/project/github/brettbeatty/hand_grenade.svg
+.. image:: https://img.shields.io/circleci/project/github/brettbeatty/matchstick.svg
     :target: https://circleci.com/gh/brettbeatty/matchstick
 
-.. image:: https://img.shields.io/github/license/brettbeatty/hand_grenade.svg
+.. image:: https://img.shields.io/github/license/brettbeatty/matchstick.svg
     :target: https://github.com/brettbeatty/matchstick/blob/master/LICENSE
 
-.. image:: https://img.shields.io/codecov/c/github/brettbeatty/hand_grenade.svg
+.. image:: https://img.shields.io/codecov/c/github/brettbeatty/matchstick.svg
     :target: https://codecov.io/gh/brettbeatty/matchstick
 
-.. image:: https://img.shields.io/pypi/v/hand_grenade.svg
+.. image:: https://img.shields.io/pypi/v/matchstick.svg
     :target: https://pypi.org/project/matchstick/
 
 Matchstick provides a decorator that allows for the overloading of Python functions.
